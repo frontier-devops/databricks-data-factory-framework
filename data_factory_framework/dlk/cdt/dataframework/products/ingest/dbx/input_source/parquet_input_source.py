@@ -19,6 +19,7 @@ class ParquetInputSource(InputSource):
             self._audit_metrics = Adtmetrcs(self._static_audit_data)
             self._dlk_created_time = datetime.now().replace(microsecond=0)
             self._dlk_updated_time = datetime.now().replace(microsecond=0)
+            self._start_time = self._dlk_created_time
             self._archive_file_timezone = datetime.now(timezone('US/Central')).strftime("%m%d%Y%H%M%S")
         except Exception as ex:
             err_msg = f"Error raised from 'ParquetInputSource read' function. Details: {ex}"
