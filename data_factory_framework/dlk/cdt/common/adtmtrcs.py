@@ -14,7 +14,7 @@ class Adtmetrcs:
     
     def _initialize(self, config):
         self._config_audit_metrics = {
-            "dsn"  : config.get("dsn"),
+            "dsn"  : config.get("dataset_name"),
             "source_loc"    : config.get("source_loc"),
             "processed_file": config.get("processed_file"),
             "target_table"  : config.get("target_table"),
